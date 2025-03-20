@@ -47,7 +47,7 @@ async def load_to_db() -> Optional[Exception]:
 
                 if batch_data:
                     await session.execute(insert(ParseSpimex), batch_data)
-                    print(f"✅ {len(batch_data)} записей добавлено в БД.")
+                    print(f"{len(batch_data)} was added in db")
 
         os.remove(setting.TEMP_CSV)
 
